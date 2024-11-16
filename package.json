@@ -1,0 +1,23 @@
+{
+  "name": "atividadedeppi",
+  "version": "1.0.0",
+  "description": "atividade 3",
+  "main": "index.js",
+  "scripts": {
+    "start": "node atividadedeppi.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrenoRota/atividadedeppi.git"
+  },
+  "author": "breno rota de carvalho lobo marques",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrenoRota/atividadedeppi/issues"
+  },
+  "homepage": "https://github.com/BrenoRota/atividadedeppi#readme",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}
