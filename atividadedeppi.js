@@ -81,8 +81,12 @@ function cadastroEscolaView(req, resp) {
                             <input type="text" class="form-control" id="cnpj" name="cnpj" required>
                         </div>
                         <div class="col-md-6">
-                            <label for="nomeEscola" class="form-label">Nome da Escola</label>
-                            <input type="text" class="form-control" id="nomeEscola" name="nomeEscola" required>
+                            <label for="razaoSocial" class="form-label">Razão Social</label>
+                            <input type="text" class="form-control" id="razaoSocial" name="razaoSocial" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="nomeFantasia" class="form-label">Nome Fantasia</label>
+                            <input type="text" class="form-control" id="nomeFantasia" name="nomeFantasia" required>
                         </div>
                         <div class="col-md-12">
                             <label for="endereco" class="form-label">Endereço</label>
@@ -153,7 +157,8 @@ function listarEscolasView(req, resp) {
                         <thead>
                             <tr>
                                 <th>CNPJ</th>
-                                <th>Nome da Escola</th>
+                                <th>Razão Social</th>
+                                <th>Nome Fantasia</th>
                                 <th>Endereço</th>
                                 <th>Cidade</th>
                                 <th>UF</th>
@@ -166,7 +171,8 @@ function listarEscolasView(req, resp) {
                             ${listaEscolas.map(escola => `
                                 <tr>
                                     <td>${escola.cnpj}</td>
-                                    <td>${escola.nomeEscola}</td>
+                                    <td>${escola.razaoSocial}</td>
+                                    <td>${escola.nomeFantasia}</td>
                                     <td>${escola.endereco}</td>
                                     <td>${escola.cidade}</td>
                                     <td>${escola.uf}</td>
@@ -185,9 +191,9 @@ function listarEscolasView(req, resp) {
 }
 
 function cadastrarEscola(req, resp) {
-    const { cnpj, nomeEscola, endereco, cidade, uf, cep, email, telefone } = req.body;
+    const { cnpj, razaoSocial, nomeFantasia, endereco, cidade, uf, cep, email, telefone } = req.body;
 
-    const escola = { cnpj, nomeEscola, endereco, cidade, uf, cep, email, telefone };
+    const escola = { cnpj, razaoSocial, nomeFantasia, endereco, cidade, uf, cep, email, telefone };
     listaEscolas.push(escola);
 
     resp.redirect('/listarEscolas');
